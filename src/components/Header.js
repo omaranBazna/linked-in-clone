@@ -20,7 +20,15 @@ const Header = () => {
             <img src="/images/search-icon.svg" alt="" />
           </SearchIcon>
         </Search>
-        <Nav></Nav>
+        <Nav>
+          <NavListWrap>
+            <NavList>
+              <a>
+                <img src="/images/nav-home.svg" />
+              </a>
+            </NavList>
+          </NavListWrap>
+        </Nav>
       </Content>
     </Container>
   );
@@ -87,5 +95,14 @@ const SearchIcon = styled.div`
 `;
 const Nav = styled.nav`
   margin-left: auto;
+  @media (max-width: 768px) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 100%;
+  }
 `;
+const NavListWrap = styled.ul``;
+const NavList = styled.il``;
 export default Header;
