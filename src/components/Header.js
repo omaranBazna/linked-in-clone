@@ -20,6 +20,7 @@ const Header = () => {
             <img src="/images/search-icon.svg" alt="" />
           </SearchIcon>
         </Search>
+        <Nav></Nav>
       </Content>
     </Container>
   );
@@ -83,5 +84,8 @@ const SearchIcon = styled.div`
   border-radius: 0 2px 2px 0;
   margin: 0;
   pointer-events: none;
+`;
+const Nav = styled.nav`
+  margin-left: auto;
 `;
 export default Header;
