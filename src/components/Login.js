@@ -7,8 +7,10 @@ const Login = () => {
         <a href="">
           <img src="/images/login-logo.svg" />
         </a>
-
-        <Join>Join Now</Join>
+        <div>
+          <Join>Join Now</Join>
+          <SignIn>Sign in</SignIn>
+        </div>
       </Nav>
     </Container>
   );
@@ -33,6 +35,9 @@ const Nav = styled.nav`
       padding: 0 5px;
     }
   }
+  & > div {
+    display: flex;
+  }
 `;
 const Join = styled.div`
   font-size: 16px;
@@ -45,6 +50,22 @@ const Join = styled.div`
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
     color: rgba(0, 0, 0, 0.9);
+  }
+`;
+const SignIn = styled.a`
+  box-shadow: inset 0 0 0 1px #0a6c20;
+  color: #0a66c2;
+  border-radius: 24px;
+  transition-duration: 167ms;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 10px 24px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(112, 181, 249, 0.15);
   }
 `;
 export default Login;
