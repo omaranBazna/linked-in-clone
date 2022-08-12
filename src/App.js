@@ -5,7 +5,9 @@ import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div>
-      <Login />
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
     </div>
   );
 }
