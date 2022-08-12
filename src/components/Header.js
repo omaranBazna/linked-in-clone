@@ -65,7 +65,13 @@ const Search = styled.div`
       height: 34px;
       border-color: #dce6f1;
       vertical-align: text-top;
+      &:focus {
+        outline: 2px solid rgba(20, 100, 255, 0.2);
+      }
     }
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 const SearchIcon = styled.div`
