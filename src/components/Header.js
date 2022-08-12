@@ -15,10 +15,11 @@ const Header = () => {
           <div>
             <input placeholder="Search" />
           </div>
+
+          <SearchIcon>
+            <img src="/images/search-icon.svg" alt="" />
+          </SearchIcon>
         </Search>
-        <SearchIcon>
-          <img src="/images/search-icon.svg" alt="" />
-        </SearchIcon>
       </Content>
     </Container>
   );
@@ -67,5 +68,14 @@ const Search = styled.div`
     }
   }
 `;
-const SearchIcon = styled.div``;
+const SearchIcon = styled.div`
+  width: 40px;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 10px;
+  border-radius: 0 2px 2px 0;
+  margin: 0;
+  pointer-events: none;
+`;
 export default Header;
