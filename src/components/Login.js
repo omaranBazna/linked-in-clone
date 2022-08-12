@@ -12,7 +12,11 @@ const Login = () => {
           <SignIn>Sign in</SignIn>
         </div>
       </Nav>
-      <Section></Section>
+      <Section>
+        <Hero>
+          <h1>Welcome to your professional community </h1>
+        </Hero>
+      </Section>
     </Container>
   );
 };
