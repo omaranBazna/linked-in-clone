@@ -10,6 +10,15 @@ const Header = () => {
             <img src="/images/home-logo.svg" />
           </a>
         </Logo>
+
+        <Search>
+          <div>
+            <input placeholder="Search" />
+          </div>
+        </Search>
+        <SearchIcon>
+          <img src="/images/search-icon.svg" alt="" />
+        </SearchIcon>
       </Content>
     </Container>
   );
@@ -35,4 +44,6 @@ const Logo = styled.span`
   margin-right: 8px;
   font-size: 0px;
 `;
+const Search = styled.div``;
+const SearchIcon = styled.div``;
 export default Header;
