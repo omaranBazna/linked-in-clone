@@ -12,6 +12,7 @@ const Login = () => {
           <SignIn>Sign in</SignIn>
         </div>
       </Nav>
+      <Section></Section>
     </Container>
   );
 };
@@ -67,6 +68,24 @@ const SignIn = styled.a`
   &:hover {
     background-color: rgba(112, 181, 249, 0.15);
     color: #0a66c2;
+  }
+`;
+const Section = styled.section`
+  display: flex;
+  align-content: flex-start;
+  min-height: 700px;
+  padding-bottom: 13px;
+  padding: 40px;
+  padding: 60px 0px;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1128px;
+  align-items: center;
+  margin: auto;
+  @media screen and (max-width: 768px) {
+    min-height: 0px;
+    margin: auto;
   }
 `;
 export default Login;
