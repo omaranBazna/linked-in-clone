@@ -40,9 +40,11 @@ const Join = styled.div`
   text-decoration: none;
   color: rgba(0, 0, 0, 0.6);
   margin-right: 12px;
+  border-radius: 4px;
   cursor: pointer;
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.9);
   }
 `;
 export default Login;
