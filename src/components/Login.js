@@ -92,4 +92,21 @@ const Section = styled.section`
     margin: auto;
   }
 `;
+const Hero = styled.div`
+  width: 100%;
+  h1 {
+    padding-bottom: 0;
+    width: 55%;
+    font-size: 56px;
+    color: #2972c9;
+    font-weight: 200;
+    line-height: 70px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+`;
 export default Login;
