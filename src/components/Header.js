@@ -25,26 +25,31 @@ const Header = () => {
             <NavList>
               <a href="#">
                 <img src="/images/nav-home.svg" />
+                <span>home</span>
               </a>
             </NavList>
             <NavList>
               <a href="#">
                 <img src="/images/nav-network.svg" />
+                <span>networking</span>
               </a>
             </NavList>
             <NavList>
               <a href="#">
                 <img src="/images/nav-jobs.svg" />
+                <span>jobs</span>
               </a>
             </NavList>
             <NavList>
               <a href="#">
                 <img src="/images/nav-messaging.svg" />
+                <span>messaging</span>
               </a>
             </NavList>
             <NavList>
               <a href="#">
                 <img src="/images/nav-notification.svg" />
+                <span>notification</span>
               </a>
             </NavList>
           </NavListWrap>
