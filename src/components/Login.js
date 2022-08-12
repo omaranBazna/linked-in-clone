@@ -116,12 +116,13 @@ const Hero = styled.div`
     }
   }
   img {
-    z-index: -1;
+    z-index: 2;
     width: 700px;
     height: 670px;
     position: absolute;
-    bottom: -2px;
+
     right: -150px;
+    bottom: -2px;
     @media (max-width: 768px) {
       top: 230px;
       width: initial;
@@ -133,8 +134,10 @@ const Hero = styled.div`
 const Form = styled.div`
   margin-top: 100px;
   width: 400px;
-  @media (width: 768px) {
+  z-index: 3;
+  @media (max-width: 768px) {
     margin-top: 20px;
+    width: 100%;
   }
 `;
 const Google = styled.button`
@@ -143,12 +146,14 @@ const Google = styled.button`
   background-color: #fff;
   align-items: center;
   height: 56px;
-  width: 100%;
+  width: 80%;
   border-radius: 28px;
   vertical-align: middle;
   font-size: 20px;
   transition-duration: 167ms;
   color: rgba(0, 0, 0, 0.6);
+  margin: auto;
+  z-index: 3;
   cursor: pointer;
   &:hover {
     background-color: rgba(207, 207, 207, 0.25);
