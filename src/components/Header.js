@@ -18,5 +18,11 @@ const Container = styled.div`
   width: 100vw;
   z-index: 100;
 `;
-const Content = styled.div``;
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 1128px;
+`;
 export default Header;
