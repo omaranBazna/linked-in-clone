@@ -66,6 +66,7 @@ const SignIn = styled.a`
   cursor: pointer;
   &:hover {
     background-color: rgba(112, 181, 249, 0.15);
+    color: #0a66c2;
   }
 `;
 export default Login;
