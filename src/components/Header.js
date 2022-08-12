@@ -23,8 +23,28 @@ const Header = () => {
         <Nav>
           <NavListWrap>
             <NavList>
-              <a>
+              <a href="#">
                 <img src="/images/nav-home.svg" />
+              </a>
+            </NavList>
+            <NavList>
+              <a href="#">
+                <img src="/images/nav-network.svg" />
+              </a>
+            </NavList>
+            <NavList>
+              <a href="#">
+                <img src="/images/nav-jobs.svg" />
+              </a>
+            </NavList>
+            <NavList>
+              <a href="#">
+                <img src="/images/nav-messaging.svg" />
+              </a>
+            </NavList>
+            <NavList>
+              <a href="#">
+                <img src="/images/nav-notification.svg" />
               </a>
             </NavList>
           </NavListWrap>
@@ -94,6 +114,7 @@ const SearchIcon = styled.div`
   pointer-events: none;
 `;
 const Nav = styled.nav`
+  height: 100vh;
   margin-left: auto;
   @media (max-width: 768px) {
     position: fixed;
@@ -103,6 +124,26 @@ const Nav = styled.nav`
     width: 100%;
   }
 `;
-const NavListWrap = styled.ul``;
-const NavList = styled.il``;
+const NavListWrap = styled.ul`
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+`;
+const NavList = styled.il`
+  display: flex;
+  align-items: center;
+  a {
+    align-items: center;
+    background: transparent;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 1.5;
+    min-height: 50px;
+    min-width: 80px;
+    position: relative;
+    text-decoration: none;
+  }
+`;
 export default Header;
