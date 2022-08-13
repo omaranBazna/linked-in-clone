@@ -198,4 +198,16 @@ const NavList = styled.li`
     }
   }
 `;
+const User = styled(NavList)`
+  a > img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+`;
+const Work = styled(User)``;
 export default Header;
