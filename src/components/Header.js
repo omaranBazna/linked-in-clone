@@ -23,35 +23,51 @@ const Header = () => {
         <Nav>
           <NavListWrap>
             <NavList>
-              <a href="#">
+              <a>
                 <img src="/images/nav-home.svg" />
                 <span>home</span>
               </a>
             </NavList>
             <NavList>
-              <a href="#">
+              <a>
                 <img src="/images/nav-network.svg" />
                 <span>networking</span>
               </a>
             </NavList>
             <NavList>
-              <a href="#">
+              <a>
                 <img src="/images/nav-jobs.svg" />
                 <span>jobs</span>
               </a>
             </NavList>
             <NavList>
-              <a href="#">
+              <a>
                 <img src="/images/nav-messaging.svg" />
                 <span>messaging</span>
               </a>
             </NavList>
             <NavList>
-              <a href="#">
+              <a>
                 <img src="/images/nav-notifications.svg" />
                 <span>notifications</span>
               </a>
             </NavList>
+            <User>
+              <a>
+                <img src="images/user.svg" />
+                <span>Me</span>
+                <img src="images/down-icon.svg" />
+              </a>
+            </User>
+            <Work>
+              <a>
+                <img src="/images/nav-work.svg" />
+                <span>
+                  Work
+                  <img src="/images/down-icon.svg" />
+                </span>
+              </a>
+            </Work>
           </NavListWrap>
         </Nav>
       </Content>
@@ -133,6 +149,19 @@ const NavListWrap = styled.ul`
   display: flex;
   flex-wrap: nowrap;
   list-style-type: none;
+  .active {
+    span:after {
+      content: "";
+      transform: scaleX(1);
+      border-bottom: 2px solid var(--white, #fff);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      transition: transform 0.2s ease-in-out;
+      width: 100%;
+      border-color: rgba(0, 0, 0, 0.9);
+    }
+  }
 `;
 const NavList = styled.li`
   display: flex;
