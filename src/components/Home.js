@@ -51,5 +51,8 @@ const Section = styled.div`
     padding: 0 5px;
   }
 `;
-const Layout = styled.div``;
+const Layout = styled.div`
+  display: grid;
+  grid-template-areas: "leftside main righside";
+`;
 export default Home;
