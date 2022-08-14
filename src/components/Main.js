@@ -13,6 +13,11 @@ const Main = () => {
       <div>
         <button>
           <img src="/images/photo.svg" />
+          <span>Photo</span>
+        </button>
+        <button>
+          <img src="/images/photo.svg" />
+          <span>video</span>
         </button>
       </div>
     </Container>
