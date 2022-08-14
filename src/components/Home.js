@@ -10,6 +10,11 @@ const Home = () => {
         </h5>
         <p>find talented in record time with Upwork and keep business moving</p>
       </Section>
+      <Layout>
+        <div>Left side</div>
+        <div>main</div>
+        <div>right side</div>
+      </Layout>
     </Container>
   );
 };
@@ -46,4 +51,5 @@ const Section = styled.div`
     padding: 0 5px;
   }
 `;
+const Layout = styled.div``;
 export default Home;
