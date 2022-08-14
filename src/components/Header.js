@@ -202,18 +202,6 @@ const NavList = styled.li`
     }
   }
 `;
-const User = styled(NavList)`
-  a > img {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-  }
-  span {
-    display: flex;
-    align-items: center;
-  }
-`;
-const Work = styled(User)``;
 
 const SignOut = styled.div`
   position: absolute;
@@ -227,4 +215,23 @@ const SignOut = styled.div`
   text-align: center;
   display: none;
 `;
+const User = styled(NavList)`
+  a > img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  span {
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    ${SignOut} {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+`;
+const Work = styled(User)``;
+
 export default Header;
