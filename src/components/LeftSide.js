@@ -5,7 +5,15 @@ import React from "react";
 const LeftSide = () => {
   return (
     <Container>
-      <ArtCard>card</ArtCard>
+      <ArtCard>
+        <UserInfo>
+          <CardBackground />
+          <a>
+            <Photo />
+            <Link>Welcome there</Link>
+          </a>
+        </UserInfo>
+      </ArtCard>
     </Container>
   );
 };
@@ -23,6 +31,6 @@ const ArtCard = styled.div`
   transition: box-shadow 3s;
   position: relative;
   border: none;
-  box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.15), 0 0 0 rgb(0, 0, 0, 0.65);
+  box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.15), 0 0 0 rgb(0, 0, 0, 0.2);
 `;
 export default LeftSide;
