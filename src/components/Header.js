@@ -214,6 +214,7 @@ const SignOut = styled.div`
   transition-duration: 167ms;
   text-align: center;
   display: none;
+  cursor: pointer;
 `;
 const User = styled(NavList)`
   a > img {
@@ -229,6 +230,7 @@ const User = styled(NavList)`
     ${SignOut} {
       align-items: center;
       justify-content: center;
+      display: flex;
     }
   }
 `;
