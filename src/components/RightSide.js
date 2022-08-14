@@ -56,6 +56,22 @@ const Title = styled.div`
   width: 100%;
   color: rgba(0, 0, 0, 0.6);
 `;
-const FeedList = styled.ul``;
+const FeedList = styled.ul`
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  position: relative;
+  font-size: 14px;
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    background-color: transparent;
+    color: rgb(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+  }
+`;
 const Avatar = styled.div``;
 export default RightSide;
