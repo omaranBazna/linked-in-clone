@@ -6,7 +6,15 @@ const Main = () => {
   return (
     <Container>
       <ShareBox>shared</ShareBox>
-      <div></div>
+      <div>
+        <img src="/images/user.svg" />
+        <button>start a post</button>
+      </div>
+      <div>
+        <button>
+          <img src="/images/photo.svg" />
+        </button>
+      </div>
     </Container>
   );
 };
