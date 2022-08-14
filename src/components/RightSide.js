@@ -10,6 +10,17 @@ const RightSide = () => {
           <h2>Add to your feed</h2>
           <img src="/images/feed-icon.svg" />
         </Title>
+        <FeedList>
+          <li>
+            <a>
+              <Avatar></Avatar>
+            </a>
+            <div>
+              <span>#LinkedIn</span>
+              <button>Follow</button>
+            </div>
+          </li>
+        </FeedList>
       </FollowCard>
     </Container>
   );
