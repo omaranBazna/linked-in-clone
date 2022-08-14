@@ -211,7 +211,7 @@ const SignOut = styled.div`
   width: 100px;
   height: 40px;
   font-size: 16px;
-  transition-duration: 167ms;
+
   text-align: center;
   display: none;
   cursor: pointer;
@@ -227,6 +227,7 @@ const User = styled(NavList)`
     display: flex;
     align-items: center;
   }
+
   &:hover {
     ${SignOut} {
       align-items: center;

@@ -2,7 +2,16 @@ import styled from "styled-components";
 import React from "react";
 
 const Home = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <Section>
+        <h5>
+          <a>Hiring in a hurry ?-</a>
+        </h5>
+        <p>find talented in record time with Upwork and keep business moving</p>
+      </Section>
+    </Container>
+  );
 };
 const Container = styled.div`
   background-color: white;
