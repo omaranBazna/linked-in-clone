@@ -19,9 +19,15 @@ const LeftSide = () => {
         <Widget>
           <a>
             <div>
-              <span>connections</span>
-              <span>grow your network</span>
+              <span>Connections</span>
+              <span>Grow your network</span>
             </div>
+            <img src="/images/widget-icon.svg" />
+            <Item>
+              <span>
+                <img src="/images/item-icon.svg" />
+              </span>
+            </Item>
           </a>
         </Widget>
       </ArtCard>
