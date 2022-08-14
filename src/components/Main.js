@@ -29,6 +29,21 @@ const Main = () => {
           </button>
         </div>
       </ShareBox>
+      <div>
+        <Article>
+          <SharedActor>
+            <a>
+              <img src="/images/user.svg" />
+              <div>
+                <span>Title</span>
+                <span>Info</span>
+                <span>Date</span>
+              </div>
+              <button></button>
+            </a>
+          </SharedActor>
+        </Article>
+      </div>
     </Container>
   );
 };
@@ -107,4 +122,10 @@ const ShareBox = styled(CommentCard)`
     }
   }
 `;
+const Article = styled(CommentCard)`
+  padding: 0;
+  margin: 0 0 8px;
+  overflow: visible;
+`;
+const SharedActor = styled.div``;
 export default Main;
