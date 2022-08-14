@@ -12,6 +12,9 @@ const LeftSide = () => {
             <Photo />
             <Link>Welcome there</Link>
           </a>
+          <a>
+            <AddPhotoText>add Photo</AddPhotoText>
+          </a>
         </UserInfo>
       </ArtCard>
     </Container>
@@ -33,4 +36,5 @@ const ArtCard = styled.div`
   border: none;
   box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.15), 0 0 0 rgb(0, 0, 0, 0.2);
 `;
+const UserInfo = styled.div``;
 export default LeftSide;
