@@ -51,5 +51,15 @@ const ShareBox = styled(CommentCard)`
   color: #958b7b;
   margin: 0 0 8px;
   background: white;
+  div {
+    button {
+      outline: none;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 48px;
+      background: transparent;
+    }
+  }
 `;
 export default Main;
