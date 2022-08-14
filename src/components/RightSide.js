@@ -18,5 +18,9 @@ const FollowCard = styled.div`
   margin-bottom: 8px;
   background-color: #fff;
   border-radius: 5px;
+  position: relative;
+  border: none;
+  box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.65), 0 0 0 rgb(0, 0, 0, 0.2);
+  padding: 12px;
 `;
 export default RightSide;
