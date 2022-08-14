@@ -90,12 +90,18 @@ const ShareBox = styled(CommentCard)`
       flex-wrap: wrap;
       justify-content: space-around;
       padding-bottom: 4px;
+
       button {
+        border-radius: 3px;
         img {
           margin: 0 4px 0 -2px;
         }
         span {
           color: #70b5f9;
+        }
+        cursor: pointer;
+        &:hover {
+          background: rgba(0, 0, 0, 0.11);
         }
       }
     }
