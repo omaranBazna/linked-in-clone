@@ -71,6 +71,17 @@ const FeedList = styled.ul`
     background-color: transparent;
     color: rgb(0, 0, 0, 0.6);
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+    padding: 16px;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: center;
+    max-height: 32px;
+    max-width: 448px;
+    text-align: center;
+    outline: none;
   }
 `;
 const Avatar = styled.div``;
