@@ -36,7 +36,12 @@ const ArtCard = styled.div`
   border: none;
   box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.15), 0 0 0 rgb(0, 0, 0, 0.2);
 `;
-const UserInfo = styled.div``;
+const UserInfo = styled.div`
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 12px 12px 16px;
+  word-wrap: break-word;
+  word-break: break-word;
+`;
 const CardBackground = styled.div``;
 const Photo = styled.div``;
 const Link = styled.div``;
