@@ -9,7 +9,7 @@ const Container = styled.div`
   grid-area: "main";
 `;
 
-const CommentsCard = styled.div`
+const CommentCard = styled.div`
   text-align: center;
   overflow: hidden;
   margin-bottom: 8px;
@@ -18,5 +18,12 @@ const CommentsCard = styled.div`
   position: relative;
   border: none;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15), 0 0 0 rgba(0, 0, 0, 0.2);
+`;
+const ShareBox = styled(CommentCard)`
+  display: flex;
+  flex-direction: column;
+  color: #958b7b;
+  margin: 0 0 8px;
+  background: white;
 `;
 export default Main;
