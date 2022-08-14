@@ -23,12 +23,13 @@ const LeftSide = () => {
               <span>Grow your network</span>
             </div>
             <img src="/images/widget-icon.svg" />
-            <Item>
-              <span>
-                <img src="/images/item-icon.svg" />
-              </span>
-            </Item>
           </a>
+          <Item>
+            <span>
+              <img src="/images/item-icon.svg" />
+              My Items
+            </span>
+          </Item>
         </Widget>
       </ArtCard>
     </Container>
@@ -126,5 +127,15 @@ const Widget = styled.div`
     color: rgba(0, 0, 0, 0.9);
   }
 `;
-const Item = styled.div``;
+const Item = styled.div`
+  border-color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  padding: 12px;
+  font-size: 12px;
+  display: block;
+  span {
+    display: flex;
+    align-items: center;
+  }
+`;
 export default LeftSide;
