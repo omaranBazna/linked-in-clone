@@ -58,6 +58,10 @@ const Header = () => {
                 <span>Me</span>
                 <img src="images/down-icon.svg" />
               </a>
+
+              <SignOut>
+                <a>Sign out</a>
+              </SignOut>
             </User>
             <Work>
               <a>
