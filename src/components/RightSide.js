@@ -28,5 +28,12 @@ const FollowCard = styled.div`
   box-shadow: 0 0 0 1px rgb(0, 0, 0, 0.65), 0 0 0 rgb(0, 0, 0, 0.2);
   padding: 12px;
 `;
-const Title = styled.div``;
+const Title = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.6);
+`;
 export default RightSide;
