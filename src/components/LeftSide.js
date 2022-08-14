@@ -136,6 +136,10 @@ const Item = styled.div`
   span {
     display: flex;
     align-items: center;
+    color: rgb(0, 0, 0);
+  }
+  &:hover {
+    background-color: rgb(0, 0, 0, 0.08);
   }
 `;
 export default LeftSide;
