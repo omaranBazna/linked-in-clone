@@ -49,6 +49,7 @@ const Section = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 0 5px;
+    padding: 0 5px;
   }
 `;
 const Layout = styled.div`
