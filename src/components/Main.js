@@ -3,7 +3,12 @@ import styled from "styled-components";
 import React from "react";
 
 const Main = () => {
-  return <Container>main</Container>;
+  return (
+    <Container>
+      <ShareBox>shared</ShareBox>
+      <div></div>
+    </Container>
+  );
 };
 const Container = styled.div`
   grid-area: "main";
