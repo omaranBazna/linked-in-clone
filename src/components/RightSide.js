@@ -56,4 +56,6 @@ const Title = styled.div`
   width: 100%;
   color: rgba(0, 0, 0, 0.6);
 `;
+const FeedList = styled.ul``;
+const Avatar = styled.div``;
 export default RightSide;
