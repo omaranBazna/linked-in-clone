@@ -122,6 +122,9 @@ const Widget = styled.div`
       }
     }
   }
+  svg {
+    color: rgba(0, 0, 0, 0.9);
+  }
 `;
 const Item = styled.div``;
 export default LeftSide;
