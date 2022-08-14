@@ -91,4 +91,7 @@ const AddPhotoText = styled.div`
   line-height: 1.33;
   font-weight: 400;
 `;
+
+const Widget = styled.div``;
+const Item = styled.div``;
 export default LeftSide;
