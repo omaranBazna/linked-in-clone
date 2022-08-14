@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
+import Main from "./Main";
 
 const Home = () => {
   return (
