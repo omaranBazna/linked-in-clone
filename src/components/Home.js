@@ -54,5 +54,6 @@ const Section = styled.div`
 const Layout = styled.div`
   display: grid;
   grid-template-areas: "leftside main righside";
+  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300, 7fr);
 `;
 export default Home;
