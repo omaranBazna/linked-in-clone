@@ -16,15 +16,15 @@ const Main = () => {
           <span>Photo</span>
         </button>
         <button>
-          <img src="/images/photo.svg" />
+          <img src="/images/video.svg" />
           <span>Video</span>
         </button>
         <button>
-          <img src="/images/plus-icon.svg" />
-          <span>Events</span>
+          <img src="/images/job.svg" />
+          <span>Jobs</span>
         </button>
         <button>
-          <img src="/images/plus-icon.svg" />
+          <img src="/images/article.svg" />
           <span>Articles</span>
         </button>
       </div>
