@@ -32,6 +32,23 @@ const LeftSide = () => {
           </Item>
         </Widget>
       </ArtCard>
+      <CommunityCard>
+        <a>
+          <span>Groups</span>
+        </a>
+        <a>
+          <span>
+            Events
+            <img src="/images/plus-icon.svg" />
+          </span>
+        </a>
+        <a>
+          <span>Follow Hashtages</span>
+        </a>
+        <a>
+          <span>Discover more</span>
+        </a>
+      </CommunityCard>
     </Container>
   );
 };
