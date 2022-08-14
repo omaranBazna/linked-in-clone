@@ -159,4 +159,15 @@ const Item = styled.div`
     background-color: rgb(0, 0, 0, 0.08);
   }
 `;
+const CommunityCard = styled(ArtCard)`
+  padding: 8px 0 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: rgb(0, 0, 0);
+    padding: 4px 12px 4px 12px;
+    font-size: 12px;
+  }
+`;
 export default LeftSide;
