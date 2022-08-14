@@ -12,7 +12,7 @@ const Main = () => {
       </div>
       <div>
         <button>
-          <img src="/images/photo.svg" />
+          <img src="/images/photo-icon.svg" />
           <span>Photo</span>
         </button>
         <button>
