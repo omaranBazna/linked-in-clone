@@ -46,7 +46,7 @@ const RightSide = () => {
   );
 };
 const Container = styled.div`
-  grid-area: rightside;
+  grid-area: "rightside";
 `;
 const FollowCard = styled.div`
   text-align: center;

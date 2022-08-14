@@ -53,7 +53,7 @@ const LeftSide = () => {
   );
 };
 const Container = styled.div`
-  grid-area: leftside;
+  grid-area: "leftside";
 `;
 
 const ArtCard = styled.div`

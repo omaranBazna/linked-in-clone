@@ -6,6 +6,6 @@ const Main = () => {
   return <Container>main</Container>;
 };
 const Container = styled.div`
-  grid-area: main;
+  grid-area: "main";
 `;
 export default Main;
