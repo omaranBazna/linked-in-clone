@@ -222,5 +222,9 @@ const SignOut = styled.div`
   border-radius: 0 0 5px 0;
   width: 100px;
   height: 40px;
+  font-size: 16px;
+  transition-duration: 167ms;
+  text-align: center;
+  display: none;
 `;
 export default Header;
