@@ -214,4 +214,13 @@ const User = styled(NavList)`
   }
 `;
 const Work = styled(User)``;
+
+const SignOut = styled.div`
+  position: absolute;
+  top: 40px;
+  background: white;
+  border-radius: 0 0 5px 0;
+  width: 100px;
+  height: 40px;
+`;
 export default Header;
