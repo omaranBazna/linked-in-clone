@@ -168,6 +168,19 @@ const CommunityCard = styled(ArtCard)`
     color: rgb(0, 0, 0);
     padding: 4px 12px 4px 12px;
     font-size: 12px;
+    &:hover {
+      color: #0a66c0;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &:last-child {
+      color: rgba(0, 0, 0, 0.9);
+      text-decoration: none;
+      border-top: 1px solid #d6cec2;
+    }
   }
 `;
 export default LeftSide;
