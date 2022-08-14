@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import React from "react";
+import LeftSide from "./LeftSide";
+import RightSide from "./RightSide";
 
 const Home = () => {
   return (
@@ -11,9 +13,9 @@ const Home = () => {
         <p>find talented in record time with Upwork and keep business moving</p>
       </Section>
       <Layout>
-        <div>Left side</div>
-        <div>main</div>
-        <div>right side</div>
+        <LeftSide />
+        <Main />
+        <RightSide />
       </Layout>
     </Container>
   );
