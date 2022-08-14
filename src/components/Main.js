@@ -17,7 +17,15 @@ const Main = () => {
         </button>
         <button>
           <img src="/images/photo.svg" />
-          <span>video</span>
+          <span>Video</span>
+        </button>
+        <button>
+          <img src="/images/plus-icon.svg" />
+          <span>Events</span>
+        </button>
+        <button>
+          <img src="/images/plus-icon.svg" />
+          <span>Articles</span>
         </button>
       </div>
     </Container>
