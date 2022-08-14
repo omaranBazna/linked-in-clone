@@ -215,6 +215,7 @@ const SignOut = styled.div`
   text-align: center;
   display: none;
   cursor: pointer;
+  color: rgb(0, 50, 150);
 `;
 const User = styled(NavList)`
   a > img {
