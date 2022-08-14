@@ -20,6 +20,15 @@ const RightSide = () => {
               <button>Follow</button>
             </div>
           </li>
+          <li>
+            <a>
+              <Avatar></Avatar>
+            </a>
+            <div>
+              <span>#Videos</span>
+              <button>follow</button>
+            </div>
+          </li>
         </FeedList>
       </FollowCard>
     </Container>
