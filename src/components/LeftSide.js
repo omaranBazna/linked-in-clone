@@ -92,6 +92,21 @@ const AddPhotoText = styled.div`
   font-weight: 400;
 `;
 
-const Widget = styled.div``;
+const Widget = styled.div`
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  & > a {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+  }
+`;
 const Item = styled.div``;
 export default LeftSide;
