@@ -58,31 +58,41 @@ const Title = styled.div`
 `;
 const FeedList = styled.ul`
   margin-top: 60px;
-  display: flex;
-  align-items: center;
-  margin: 12px 0;
-  position: relative;
-  font-size: 14px;
-  & > div {
+  li {
     display: flex;
-    flex-direction: column;
-  }
-  button {
-    background-color: transparent;
-    color: rgb(0, 0, 0, 0.6);
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
-    padding: 16px;
     align-items: center;
-    border-radius: 15px;
-    box-sizing: border-box;
-    font-weight: 600;
-    display: inline-flex;
-    justify-content: center;
-    max-height: 32px;
-    max-width: 448px;
-    text-align: center;
-    outline: none;
+    margin: 12px 0;
+    position: relative;
+    font-size: 14px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+    button {
+      background-color: transparent;
+      color: rgb(0, 0, 0, 0.6);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+      padding: 16px;
+      align-items: center;
+      border-radius: 15px;
+      box-sizing: border-box;
+      font-weight: 600;
+      display: inline-flex;
+      justify-content: center;
+      max-height: 32px;
+      max-width: 448px;
+      text-align: center;
+      outline: none;
+    }
   }
 `;
-const Avatar = styled.div``;
+const Avatar = styled.div`
+  background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+`;
 export default RightSide;
