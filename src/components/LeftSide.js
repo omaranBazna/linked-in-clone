@@ -10,12 +10,20 @@ const LeftSide = () => {
           <CardBackground />
           <a>
             <Photo />
-            <Link>Welcome there</Link>
+            <Link>Welcome ,there!</Link>
           </a>
           <a>
             <AddPhotoText>add Photo</AddPhotoText>
           </a>
         </UserInfo>
+        <Widget>
+          <a>
+            <div>
+              <span>connections</span>
+              <span>grow your network</span>
+            </div>
+          </a>
+        </Widget>
       </ArtCard>
     </Container>
   );
@@ -70,5 +78,11 @@ const Link = styled.div`
   color: rgba(0, 0, 0, 0.9);
   font-weight: 600;
 `;
-const AddPhotoText = styled.div``;
+const AddPhotoText = styled.div`
+  color: #0a66c2;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 400;
+`;
 export default LeftSide;
