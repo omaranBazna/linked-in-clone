@@ -100,9 +100,7 @@ const Main = () => {
               </SharedActor>
               <Description>description</Description>
               <SharedImage>
-                <a>
-                  <img src="http://detroit.cbslocal.com/wp-content/uploads/sites/15909782/2011/05/belle-isle-sunset_luw37.jpg" />
-                </a>
+                <a>{post.postImage && <img src={post.postImage} />}</a>
               </SharedImage>
               <SocialCounts>
                 <li>
