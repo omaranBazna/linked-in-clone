@@ -1,7 +1,28 @@
 import React from "react";
 import styled from "styled-components";
+import { signin, Provider, auth } from "../firebase";
+import { useDispatch } from "react-redux/es/exports";
+import { signOutA, signInA } from "../app/features/userSlice";
+import { useSelector } from "react-redux";
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const userName = useSelector((state) => state.user.userName);
+  const handleSignin = () => {
+    signin(auth, Provider)
+      .then((result) => {
+        dispatch(
+          signInA({
+            userName: result.displayName,
+            userEmail: result.email,
+            userPhoto: result.photoURL,
+          })
+        );
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
   return (
     <Container>
       <Nav>
@@ -19,10 +40,12 @@ const Login = () => {
           <img src="/images/login-hero.svg" alt="" />
         </Hero>
         <Form>
-          <Google>
-            <img src="/images/google.svg" />
-            Sign In with Google
-          </Google>
+          {!userName && (
+            <Google onClick={handleSignin}>
+              <img src="/images/google.svg" />
+              Sign In with Google
+            </Google>
+          )}
         </Form>
       </Section>
     </Container>
