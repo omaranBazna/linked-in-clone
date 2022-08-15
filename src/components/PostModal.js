@@ -18,14 +18,16 @@ const PostModal = () => {
             <span>Name</span>
           </UserInfo>
         </SharedContent>
-        <textarea
-          value={editorText}
-          onChange={(e) => {
-            setEditorText(e.target.value);
-          }}
-          placeholder="what do you want to talk about"
-          autoFocus="true"
-        ></textarea>
+        <Editor>
+          <textarea
+            value={editorText}
+            onChange={(e) => {
+              setEditorText(e.target.value);
+            }}
+            placeholder="what do you want to talk about"
+            autoFocus="true"
+          ></textarea>
+        </Editor>
         <SharedCreation>
           <AttachAssets>
             <AssetButton>
@@ -164,5 +166,18 @@ const PostButton = styled.button`
     background: #004182;
   }
 `;
-const Editor = styled.div``;
+const Editor = styled.div`
+  padding: 12px 24px;
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+  }
+  input {
+    width: 100%;
+    height: 35px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+`;
 export default PostModal;
