@@ -222,5 +222,10 @@ const Editor = styled.div`
     margin-bottom: 20px;
   }
 `;
-const UploadImage = styled.div``;
+const UploadImage = styled.div`
+  text-align: center;
+  img {
+    width: 100%;
+  }
+`;
 export default PostModal;
