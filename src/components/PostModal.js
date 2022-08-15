@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import React from "react";
 import { useState } from "react";
+import ReactPlayer from "react-player";
 const PostModal = ({ showModal, handleClick }) => {
   const [editorText, setEditorText] = useState("");
   const [shareImage, setShareImage] = useState("");
+  const [videoLink, setVideoLink] = useState("");
   const reset = (e) => {
     setEditorText("");
     handleClick(e);
