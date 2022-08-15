@@ -3,9 +3,21 @@ import styled from "styled-components";
 import React from "react";
 import PostModal from "./PostModal";
 import { useState } from "react";
+import { useEffect } from "react";
+import {
+  collection,
+  onSnapshot,
+  doc,
+  query,
+  orderBy,
+  limit,
+} from "firebase/firestore";
+import { db } from "../firebase";
 
+import { useSelector } from "react-redux";
 const Main = () => {
   const [showModal, setShowModal] = useState("close");
+  const userName = useSelector((state) => state.user.userName);
   const handleClick = (e) => {
     e.preventDefault();
     if (e.target !== e.currentTarget) {
@@ -23,6 +35,18 @@ const Main = () => {
         break;
     }
   };
+
+  useEffect(() => {
+    let posts = [];
+
+    const q1 = query(collection(db, "posts"), orderBy("time"), limit(3));
+    const unsubscribe1 = onSnapshot(q1, (querySnapshot) => {
+      posts = [];
+      querySnapshot.forEach((doc) => {
+        posts = [...posts, { id: doc.id, ...doc.data() }];
+      });
+    });
+  }, [userName]);
   return (
     <Container>
       <ShareBox>
