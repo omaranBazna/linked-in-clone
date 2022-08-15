@@ -4,7 +4,7 @@ import React from "react";
 const PostModal = () => {
   return (
     <Container>
-      <Content></Content>
+      <Content>Model</Content>
     </Container>
   );
 };
@@ -23,5 +23,11 @@ const Content = styled.div`
   width: 100%;
   max-width: 552px;
   background-color: white;
+  max-height: 90%;
+  overflow: initial;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 `;
 export default PostModal;
