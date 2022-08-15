@@ -8,6 +8,12 @@ const PostModal = ({ showModal, handleClick }) => {
     setEditorText("");
     handleClick(e);
   };
+  const handleChange = (e) => {
+    const image = e.target.files[0];
+    if (image === "" || images === undefined) {
+      alert(`not an image ,the file is a ${typeof image}`);
+    }
+  };
   return (
     <>
       {showModal == "open" && (
