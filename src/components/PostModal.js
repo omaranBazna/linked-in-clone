@@ -3,9 +3,12 @@ import React from "react";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
-const PostModal = ({ showModal, handleClick }) => {
+import { db } from "../firebase";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+const PostModal = ({ showModal, handleClick, setShowModal }) => {
   const photo = useSelector((state) => state.user.userPhoto);
   const name = useSelector((state) => state.user.userName);
+  const email = useSelector((state) => state.user.userEmail);
   const [editorText, setEditorText] = useState("");
   const [shareImage, setShareImage] = useState("");
   const [videoLink, setVideoLink] = useState("");
@@ -30,7 +33,24 @@ const PostModal = ({ showModal, handleClick }) => {
     setVideoLink("");
     setAssetArea(area);
   };
-  const submitPost = () => {};
+  const submitPost = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "posts"), {
+        user: email,
+        displayName: name,
+        photoURL: photo,
+        postContent: editorText,
+        postImage: shareImage ? URL.createObjectURL(shareImage) : "",
+        postVideo: videoLink,
+        time: serverTimestamp(new Date(Date.now())),
+      });
+
+      setShowModal("close");
+      reset();
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
   return (
     <>
       {showModal == "open" && (
@@ -110,12 +130,7 @@ const PostModal = ({ showModal, handleClick }) => {
                   Anyone
                 </AssetButton>
               </ShareComment>
-              <PostButton
-                disabled={editorText ? true : false}
-                onClick={submitPost}
-              >
-                Post
-              </PostButton>
+              <PostButton onClick={submitPost}>Post</PostButton>
             </SharedCreation>
           </Content>
         </Container>
@@ -240,11 +255,11 @@ const PostButton = styled.button`
   padding-right: 16px;
 
   cursor: pointer;
-  background: ${(props) => (!props.disabled ? "rgba(0,0,0,0.8)" : "#0a66c2")};
-  color: ${(props) => (!props.disabled ? "rgba(1,1,1,0.2)" : "white")};
+  background: "#0a66c2";
+  color: "white";
 
   &:hover {
-    background: ${(props) => (!props.disabled ? "rgba(0,0,0,0.8)" : "#004182")};
+    background: "#004182";
   }
 `;
 const Editor = styled.div`

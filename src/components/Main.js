@@ -3,6 +3,7 @@ import styled from "styled-components";
 import React from "react";
 import PostModal from "./PostModal";
 import { useState } from "react";
+
 const Main = () => {
   const [showModal, setShowModal] = useState("close");
   const handleClick = (e) => {
@@ -106,7 +107,11 @@ const Main = () => {
             </button>
           </SocialAction>
         </Article>
-        <PostModal showModal={showModal} handleClick={handleClick} />
+        <PostModal
+          showModal={showModal}
+          handleClick={handleClick}
+          setShowModal={setShowModal}
+        />
       </div>
     </Container>
   );
