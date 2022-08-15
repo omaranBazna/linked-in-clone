@@ -68,6 +68,10 @@ const Main = () => {
               <a>2 comments</a>
             </li>
           </SocialCounts>
+          <Button>
+            <img src="/images/like.svg" />
+            <span>Like</span>
+          </Button>
         </Article>
       </div>
     </Container>
@@ -238,4 +242,5 @@ const SocialCounts = styled.ul`
     }
   }
 `;
+const Button = styled.button``;
 export default Main;
