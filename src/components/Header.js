@@ -4,10 +4,11 @@ import { useDispatch } from "react-redux";
 import { signOutA } from "../app/features/userSlice";
 
 import { signout, auth } from "../firebase";
-
+import { useSelector } from "react-redux";
 const Header = () => {
   const dispatch = useDispatch();
-
+  const photo = useSelector((state) => state.user.userPhoto);
+  console.log(photo);
   const handleSignOut = () => {
     signout(auth)
       .then((result) => {
@@ -69,7 +70,7 @@ const Header = () => {
             </NavList>
             <User>
               <a>
-                <img src="images/user.svg" />
+                <img src={photo ? photo : "images/user.svg"} />
                 <span>Me</span>
                 <img src="images/down-icon.svg" />
               </a>
