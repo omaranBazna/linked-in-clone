@@ -26,6 +26,13 @@ const PostModal = () => {
               <img src="images/video.svg" />
             </AssetButton>
           </AttachAssets>
+          <ShareComment>
+            <AssetButton>
+              <img src="/images/shared.svg" />
+              Anyone
+            </AssetButton>
+          </ShareComment>
+          <PostButton>Post</PostButton>
         </SharedCreation>
       </Content>
     </Container>
@@ -123,6 +130,29 @@ const AttachAssets = styled.div`
   padding-right: 8px;
   ${AssetButton} {
     width: 48px;
+  }
+`;
+const ShareComment = styled.div`
+  padding-left: 8px;
+
+  margin-right: auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  ${AssetButton} {
+    img {
+      margin-right: 5px;
+    }
+  }
+`;
+const PostButton = styled.button`
+  min-width: 60px;
+  border-radius: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: #0a66c2;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background: #004182;
   }
 `;
 export default PostModal;
