@@ -6,6 +6,7 @@ const PostModal = ({ showModal, handleClick }) => {
   const [editorText, setEditorText] = useState("");
   const [shareImage, setShareImage] = useState("");
   const [videoLink, setVideoLink] = useState("");
+  const [assetArea, setAssetArea] = useState("");
   const reset = (e) => {
     setEditorText("");
     handleClick(e);
@@ -17,6 +18,11 @@ const PostModal = ({ showModal, handleClick }) => {
       return;
     }
     setShareImage(image);
+  };
+  const switchAssetArea = (area) => {
+    setShareImage("");
+    setVideoLink("");
+    setAssetArea(area);
   };
   return (
     <>
