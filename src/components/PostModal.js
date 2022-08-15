@@ -53,7 +53,7 @@ const PostModal = ({ showModal, handleClick }) => {
                   Anyone
                 </AssetButton>
               </ShareComment>
-              <PostButton>Post</PostButton>
+              <PostButton disabled={editorText ? true : false}>Post</PostButton>
             </SharedCreation>
           </Content>
         </Container>
@@ -86,6 +86,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   transform: translateY(-130px);
+  transition: fadein 3s;
 `;
 const Header = styled.div`
   display: block;
@@ -175,9 +176,10 @@ const PostButton = styled.button`
   border-radius: 20px;
   padding-left: 16px;
   padding-right: 16px;
-  background: #0a66c2;
+
   color: white;
   cursor: pointer;
+  background: ${(props) => (!props.disabled ? "rgba(0,0,0,0.8)" : "#0a66c2")};
   &:hover {
     background: #004182;
   }
