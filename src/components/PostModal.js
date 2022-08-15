@@ -116,13 +116,13 @@ const AssetButton = styled.button`
   height: 35px;
   min-width: auto;
   color: rgba(0, 0, 0, 0.6);
-  img {
-    width: 40px;
-  }
 `;
 const AttachAssets = styled.div`
   align-items: center;
   display: flex;
   padding-right: 8px;
+  ${AssetButton} {
+    width: 48px;
+  }
 `;
 export default PostModal;
