@@ -30,6 +30,7 @@ const PostModal = ({ showModal, handleClick }) => {
     setVideoLink("");
     setAssetArea(area);
   };
+  const submitPost = () => {};
   return (
     <>
       {showModal == "open" && (
@@ -109,7 +110,12 @@ const PostModal = ({ showModal, handleClick }) => {
                   Anyone
                 </AssetButton>
               </ShareComment>
-              <PostButton disabled={editorText ? true : false}>Post</PostButton>
+              <PostButton
+                disabled={editorText ? true : false}
+                onClick={submitPost}
+              >
+                Post
+              </PostButton>
             </SharedCreation>
           </Content>
         </Container>
