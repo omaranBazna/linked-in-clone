@@ -17,6 +17,16 @@ const PostModal = () => {
             <span>Name</span>
           </UserInfo>
         </SharedContent>
+        <SharedCreation>
+          <AttachAssets>
+            <AssetButton>
+              <img src="images/photo-icon.svg" />
+            </AssetButton>
+            <AssetButton>
+              <img src="images/video.svg" />
+            </AssetButton>
+          </AttachAssets>
+        </SharedCreation>
       </Content>
     </Container>
   );
@@ -94,5 +104,25 @@ const UserInfo = styled.div`
     line-height: 1.5;
     margin-left: 5px;
   }
+`;
+const SharedCreation = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 24px 12px 16px;
+`;
+const AssetButton = styled.button`
+  display: flex;
+  align-items: center;
+  height: 35px;
+  min-width: auto;
+  color: rgba(0, 0, 0, 0.6);
+  img {
+    width: 40px;
+  }
+`;
+const AttachAssets = styled.div`
+  align-items: center;
+  display: flex;
+  padding-right: 8px;
 `;
 export default PostModal;
