@@ -1,7 +1,22 @@
 import styled from "styled-components";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { signOutA } from "../app/features/userSlice";
+
+import { signout, auth } from "../firebase";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const handleSignOut = () => {
+    signout(auth)
+      .then((result) => {
+        dispatch(signOutA());
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
   return (
     <Container>
       <Content>
@@ -59,7 +74,7 @@ const Header = () => {
                 <img src="images/down-icon.svg" />
               </a>
 
-              <SignOut>
+              <SignOut onClick={handleSignOut}>
                 <a>Sign out</a>
               </SignOut>
             </User>
