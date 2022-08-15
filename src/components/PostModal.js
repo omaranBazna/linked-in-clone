@@ -10,9 +10,11 @@ const PostModal = ({ showModal, handleClick }) => {
   };
   const handleChange = (e) => {
     const image = e.target.files[0];
-    if (image === "" || images === undefined) {
+    if (image === "" || image === undefined) {
       alert(`not an image ,the file is a ${typeof image}`);
+      return;
     }
+    setShareImage(image);
   };
   return (
     <>
@@ -44,6 +46,15 @@ const PostModal = ({ showModal, handleClick }) => {
                 placeholder="what do you want to talk about"
                 autoFocus="true"
               ></textarea>
+              <UploadImage>
+                <input
+                  type="file"
+                  accept="image/gif ,image/jpeg ,image/png"
+                  name="image"
+                  id="file"
+                  style={{ display: "none" }}
+                />
+              </UploadImage>
             </Editor>
             <SharedCreation>
               <AttachAssets>
@@ -206,4 +217,5 @@ const Editor = styled.div`
     margin-bottom: 20px;
   }
 `;
+const UploadImage = styled.div``;
 export default PostModal;
