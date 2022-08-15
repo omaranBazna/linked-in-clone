@@ -92,10 +92,10 @@ const PostModal = ({ showModal, handleClick }) => {
             </Editor>
             <SharedCreation>
               <AttachAssets>
-                <AssetButton>
+                <AssetButton onClick={() => switchAssetArea("image")}>
                   <img src="images/photo-icon.svg" />
                 </AssetButton>
-                <AssetButton>
+                <AssetButton onClick={() => switchAssetArea("media")}>
                   <img src="images/video.svg" />
                 </AssetButton>
               </AttachAssets>
