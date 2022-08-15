@@ -53,7 +53,12 @@ const PostModal = ({ showModal, handleClick }) => {
                   name="image"
                   id="file"
                   style={{ display: "none" }}
+                  onChange={handleChange}
                 />
+                <p>
+                  <label htmlFor="file">Select an image to share</label>
+                </p>
+                {shareImage && <img src={URL.createObjectURL(shareImage)} />}
               </UploadImage>
             </Editor>
             <SharedCreation>
