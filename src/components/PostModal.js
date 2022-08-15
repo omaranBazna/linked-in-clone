@@ -4,7 +4,14 @@ import React from "react";
 const PostModal = () => {
   return (
     <Container>
-      <Content>Model</Content>
+      <Content>
+        <Header>
+          <h2>Create a post</h2>
+          <button>
+            <img src="https://freesvg.org/img/1544641784.png" />
+          </button>
+        </Header>
+      </Content>
     </Container>
   );
 };
