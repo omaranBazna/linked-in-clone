@@ -13,9 +13,9 @@ const Login = () => {
       .then((result) => {
         dispatch(
           signInA({
-            userName: result.displayName,
-            userEmail: result.email,
-            userPhoto: result.photoURL,
+            userName: result.user.displayName,
+            userEmail: result.user.email,
+            userPhoto: result.user.photoURL,
           })
         );
       })
