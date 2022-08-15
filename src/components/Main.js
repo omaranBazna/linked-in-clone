@@ -72,6 +72,18 @@ const Main = () => {
             <img src="/images/like.svg" />
             <span>Like</span>
           </Button>
+          <Button>
+            <img src="/images/comments.svg" />
+            <span>Comment</span>
+          </Button>
+          <Button>
+            <img src="/images/share.svg" />
+            <span>Share</span>
+          </Button>
+          <Button>
+            <img src="/images/send.svg" />
+            <span>Send</span>
+          </Button>
         </Article>
       </div>
     </Container>
