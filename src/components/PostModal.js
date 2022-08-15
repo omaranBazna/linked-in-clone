@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 const PostModal = ({ showModal, handleClick }) => {
   const [editorText, setEditorText] = useState("");
+  const [shareImage, setShareImage] = useState("");
   const reset = (e) => {
     setEditorText("");
     handleClick(e);
