@@ -85,6 +85,7 @@ const Content = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  transform: translateY(-130px);
 `;
 const Header = styled.div`
   display: block;
