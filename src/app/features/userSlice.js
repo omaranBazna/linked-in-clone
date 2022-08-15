@@ -8,6 +8,6 @@ const initialState = {
 const userSlice = createSlice({
   name: "user",
   initialState,
-  reducer: {},
+  reducers: {},
 });
-export const userReducer = userSlice.reducer;
+export const userReducer = userSlice.reducers;
