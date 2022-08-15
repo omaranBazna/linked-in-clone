@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import React from "react";
-
+import { useState } from "react";
 const PostModal = () => {
+  const [editorText, setEditorText] = useState("");
   return (
     <Container>
       <Content>
@@ -17,6 +18,14 @@ const PostModal = () => {
             <span>Name</span>
           </UserInfo>
         </SharedContent>
+        <textarea
+          value={editorText}
+          onChange={(e) => {
+            setEditorText(e.target.value);
+          }}
+          placeholder="what do you want to talk about"
+          autoFocus="true"
+        ></textarea>
         <SharedCreation>
           <AttachAssets>
             <AssetButton>
@@ -155,4 +164,5 @@ const PostButton = styled.button`
     background: #004182;
   }
 `;
+const Editor = styled.div``;
 export default PostModal;
