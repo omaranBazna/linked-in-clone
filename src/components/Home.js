@@ -3,8 +3,17 @@ import React from "react";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import Main from "./Main";
-
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 const Home = () => {
+  const userName = useSelector((state) => state.user.userName);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!userName) {
+      navigate("../", { replace: true });
+    }
+  }, [userName]);
   return (
     <Container>
       <Section>
