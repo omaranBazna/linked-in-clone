@@ -50,6 +50,24 @@ const Main = () => {
               <img src="http://detroit.cbslocal.com/wp-content/uploads/sites/15909782/2011/05/belle-isle-sunset_luw37.jpg" />
             </a>
           </SharedImage>
+          <SocialCounts>
+            <li>
+              <button>
+                <img
+                  src="https://static-exp1.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt"
+                  alt=""
+                />
+                <img
+                  src="https://static-exp1.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8"
+                  alt=""
+                />
+              </button>
+              <span>57</span>
+            </li>
+            <li>
+              <a>2 comments</a>
+            </li>
+          </SocialCounts>
         </Article>
       </div>
     </Container>
@@ -201,4 +219,5 @@ const SharedImage = styled.div`
     height: 100%;
   }
 `;
+const SocialCounts = styled.ul``;
 export default Main;
