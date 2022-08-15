@@ -11,6 +11,12 @@ const PostModal = () => {
             <img src="https://freesvg.org/img/1544641784.png" />
           </button>
         </Header>
+        <SharedContent>
+          <UserInfo>
+            <img src="/images/user.svg" />
+            <span>Name</span>
+          </UserInfo>
+        </SharedContent>
       </Content>
     </Container>
   );
@@ -37,4 +43,30 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
 `;
+const Header = styled.div`
+  display: block;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    height: 40px;
+    width: 40px;
+    min-width: auto;
+    color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+  }
+`;
+const SharedContent = styled.div``;
+const UserInfo = styled.div``;
 export default PostModal;
