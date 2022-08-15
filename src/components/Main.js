@@ -27,7 +27,7 @@ const Main = () => {
       <ShareBox>
         <div>
           <img src="/images/user.svg" />
-          <button>start a post</button>
+          <button onClick={handleClick}>start a post</button>
         </div>
         <div>
           <button>
@@ -106,7 +106,7 @@ const Main = () => {
             </button>
           </SocialAction>
         </Article>
-        <PostModal />
+        <PostModal showModal={showModal} handleClick={handleClick} />
       </div>
     </Container>
   );
