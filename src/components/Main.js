@@ -85,7 +85,9 @@ const Main = () => {
             <Article>
               <SharedActor>
                 <a>
-                  <img src="/images/user.svg" />
+                  <img
+                    src={post.photoURL ? post.photoURL : "/images/user.svg"}
+                  />
                   <div>
                     <span>Title</span>
                     <span>Info</span>
