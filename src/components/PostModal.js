@@ -61,6 +61,19 @@ const PostModal = ({ showModal, handleClick }) => {
                   <label htmlFor="file">Select an image to share</label>
                 </p>
                 {shareImage && <img src={URL.createObjectURL(shareImage)} />}
+                <>
+                  <input
+                    type="text"
+                    placeholder="Please Input a video link"
+                    value={videoLink}
+                    onChange={(e) => {
+                      setVideoLink(e.target.value);
+                    }}
+                  />
+                  {videoLink && (
+                    <ReactPlayer width={"100%"} url={videoLink}></ReactPlayer>
+                  )}
+                </>
               </UploadImage>
             </Editor>
             <SharedCreation>
