@@ -39,11 +39,17 @@ const Main = () => {
                 <span>Info</span>
                 <span>Date</span>
               </div>
-              <button>
-                <img src="/images/widget-icon.svg" />
-              </button>
             </a>
+            <button>
+              <img src="/images/ellipise.svg" />
+            </button>
           </SharedActor>
+          <Description>description</Description>
+          <SharedImage>
+            <a>
+              <img src="http://detroit.cbslocal.com/wp-content/uploads/sites/15909782/2011/05/belle-isle-sunset_luw37.jpg" />
+            </a>
+          </SharedImage>
         </Article>
       </div>
     </Container>
@@ -167,13 +173,32 @@ const SharedActor = styled.div`
       }
     }
   }
-  botton {
+  button {
     position: absolute;
     right: 12px;
     top: 0;
     background: transparent;
     border: none;
     outline: none;
+  }
+`;
+const Description = styled.div`
+  padding: 0 16px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  text-align: center;
+`;
+const SharedImage = styled.div`
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  position: relative;
+  background-color: #f9fafb;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
   }
 `;
 export default Main;
