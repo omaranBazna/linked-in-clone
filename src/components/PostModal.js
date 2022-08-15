@@ -9,6 +9,9 @@ const PostModal = ({ showModal, handleClick }) => {
   const [assetArea, setAssetArea] = useState("");
   const reset = (e) => {
     setEditorText("");
+    setShareImage("");
+    setVideoLink("");
+    setAssetArea("");
     handleClick(e);
   };
   const handleChange = (e) => {
