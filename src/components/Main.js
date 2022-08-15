@@ -98,7 +98,9 @@ const Main = () => {
                   <img src="/images/ellipise.svg" />
                 </button>
               </SharedActor>
-              <Description>description</Description>
+              <Description>
+                {post.postContent && <>{post.postContent}</>}
+              </Description>
               <SharedImage>
                 <a>{post.postImage && <img src={post.postImage} />}</a>
               </SharedImage>
