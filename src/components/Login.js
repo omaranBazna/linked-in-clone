@@ -4,13 +4,15 @@ import { signin, Provider, auth } from "../firebase";
 import { useDispatch } from "react-redux/es/exports";
 import { signOutA, signInA } from "../app/features/userSlice";
 import { useSelector } from "react-redux";
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const dispatch = useDispatch();
   const userName = useSelector((state) => state.user.userName);
+  const navigate = useNavigate();
   const handleSignin = () => {
     signin(auth, Provider)
       .then((result) => {
+        navigate("../home", { replace: true });
         dispatch(
           signInA({
             userName: result.user.displayName,
