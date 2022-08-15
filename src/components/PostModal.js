@@ -2,7 +2,10 @@ import styled from "styled-components";
 import React from "react";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+import { useSelector } from "react-redux";
 const PostModal = ({ showModal, handleClick }) => {
+  const photo = useSelector((state) => state.user.userPhoto);
+  const name = useSelector((state) => state.user.userName);
   const [editorText, setEditorText] = useState("");
   const [shareImage, setShareImage] = useState("");
   const [videoLink, setVideoLink] = useState("");
@@ -44,8 +47,9 @@ const PostModal = ({ showModal, handleClick }) => {
             </Header>
             <SharedContent>
               <UserInfo>
-                <img src="/images/user.svg" />
-                <span>Name</span>
+                {photo ? <img src={photo} /> : <img src="/images/user.svg" />}
+
+                <span>{name}</span>
               </UserInfo>
             </SharedContent>
             <Editor>
