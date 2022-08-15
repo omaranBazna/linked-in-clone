@@ -61,8 +61,8 @@ const Main = () => {
                   src="https://static-exp1.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8"
                   alt=""
                 />
+                <span>57</span>
               </button>
-              <span>57</span>
             </li>
             <li>
               <a>2 comments</a>
@@ -219,5 +219,21 @@ const SharedImage = styled.div`
     height: 100%;
   }
 `;
-const SocialCounts = styled.ul``;
+const SocialCounts = styled.ul`
+  line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
+  overflow: auto;
+  margin: 0 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #c9e5c9;
+  list-style: none;
+  li {
+    margin-right: 5px;
+    font-size: 12px;
+    button {
+      display: flex;
+    }
+  }
+`;
 export default Main;
