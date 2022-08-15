@@ -57,33 +57,38 @@ const PostModal = ({ showModal, handleClick }) => {
                 placeholder="what do you want to talk about"
                 autoFocus="true"
               ></textarea>
-              <UploadImage>
-                <input
-                  type="file"
-                  accept="image/gif ,image/jpeg ,image/png"
-                  name="image"
-                  id="file"
-                  style={{ display: "none" }}
-                  onChange={handleChange}
-                />
-                <p>
-                  <label htmlFor="file">Select an image to share</label>
-                </p>
-                {shareImage && <img src={URL.createObjectURL(shareImage)} />}
-                <>
+              {assetArea === "image" ? (
+                <UploadImage>
                   <input
-                    type="text"
-                    placeholder="Please Input a video link"
-                    value={videoLink}
-                    onChange={(e) => {
-                      setVideoLink(e.target.value);
-                    }}
+                    type="file"
+                    accept="image/gif ,image/jpeg ,image/png"
+                    name="image"
+                    id="file"
+                    style={{ display: "none" }}
+                    onChange={handleChange}
                   />
-                  {videoLink && (
-                    <ReactPlayer width={"100%"} url={videoLink}></ReactPlayer>
-                  )}
-                </>
-              </UploadImage>
+                  <p>
+                    <label htmlFor="file">Select an image to share</label>
+                  </p>
+                  {shareImage && <img src={URL.createObjectURL(shareImage)} />}
+                </UploadImage>
+              ) : (
+                assetArea === "media" && (
+                  <>
+                    <input
+                      type="text"
+                      placeholder="Please Input a video link"
+                      value={videoLink}
+                      onChange={(e) => {
+                        setVideoLink(e.target.value);
+                      }}
+                    />
+                    {videoLink && (
+                      <ReactPlayer width={"100%"} url={videoLink}></ReactPlayer>
+                    )}
+                  </>
+                )
+              )}
             </Editor>
             <SharedCreation>
               <AttachAssets>
@@ -132,7 +137,7 @@ const Content = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  transform: translateY(-130px);
+
   transition: fadein 3s;
 `;
 const Header = styled.div`
