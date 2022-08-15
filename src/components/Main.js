@@ -15,9 +15,13 @@ import {
 import { db } from "../firebase";
 
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { setPosts } from "../app/features/postsSlice";
 const Main = () => {
   const [showModal, setShowModal] = useState("close");
   const userName = useSelector((state) => state.user.userName);
+  const dispatch = useDispatch();
+
   const handleClick = (e) => {
     e.preventDefault();
     if (e.target !== e.currentTarget) {
@@ -39,14 +43,15 @@ const Main = () => {
   useEffect(() => {
     let posts = [];
 
-    const q1 = query(collection(db, "posts"), orderBy("time"), limit(3));
+    const q1 = query(collection(db, "posts"), orderBy("time"));
     const unsubscribe1 = onSnapshot(q1, (querySnapshot) => {
       posts = [];
       querySnapshot.forEach((doc) => {
         posts = [...posts, { id: doc.id, ...doc.data() }];
       });
+      dispatch(setPosts(posts));
     });
-  }, [userName]);
+  }, [userName, showModal]);
   return (
     <Container>
       <ShareBox>
