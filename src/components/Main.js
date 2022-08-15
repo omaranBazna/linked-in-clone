@@ -20,6 +20,7 @@ import { setPosts } from "../app/features/postsSlice";
 const Main = () => {
   const [showModal, setShowModal] = useState("close");
   const userName = useSelector((state) => state.user.userName);
+  const postsArr = useSelector((state) => state.posts.posts);
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
@@ -78,70 +79,75 @@ const Main = () => {
           </button>
         </div>
       </ShareBox>
-      <div>
-        <Article>
-          <SharedActor>
-            <a>
-              <img src="/images/user.svg" />
-              <div>
-                <span>Title</span>
-                <span>Info</span>
-                <span>Date</span>
-              </div>
-            </a>
-            <button>
-              <img src="/images/ellipise.svg" />
-            </button>
-          </SharedActor>
-          <Description>description</Description>
-          <SharedImage>
-            <a>
-              <img src="http://detroit.cbslocal.com/wp-content/uploads/sites/15909782/2011/05/belle-isle-sunset_luw37.jpg" />
-            </a>
-          </SharedImage>
-          <SocialCounts>
-            <li>
-              <button>
-                <img
-                  src="https://static-exp1.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt"
-                  alt=""
-                />
-                <img
-                  src="https://static-exp1.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8"
-                  alt=""
-                />
-                <span>57</span>
-              </button>
-            </li>
-            <li>
-              <a>2 comments</a>
-            </li>
-          </SocialCounts>
-          <SocialAction>
-            <button>
-              <img src="/images/like.svg" />
-              <span>Like</span>
-            </button>
-            <button>
-              <img src="/images/comments.svg" />
-              <span>Comment</span>
-            </button>
-            <button>
-              <img src="/images/share.svg" />
-              <span>Share</span>
-            </button>
-            <button>
-              <img src="/images/send.svg" />
-              <span>Send</span>
-            </button>
-          </SocialAction>
-        </Article>
-        <PostModal
-          showModal={showModal}
-          handleClick={handleClick}
-          setShowModal={setShowModal}
-        />
-      </div>
+      {postsArr.map((post, index) => {
+        return (
+          <div key={index}>
+            <Article>
+              <SharedActor>
+                <a>
+                  <img src="/images/user.svg" />
+                  <div>
+                    <span>Title</span>
+                    <span>Info</span>
+                    <span>Date</span>
+                  </div>
+                </a>
+                <button>
+                  <img src="/images/ellipise.svg" />
+                </button>
+              </SharedActor>
+              <Description>description</Description>
+              <SharedImage>
+                <a>
+                  <img src="http://detroit.cbslocal.com/wp-content/uploads/sites/15909782/2011/05/belle-isle-sunset_luw37.jpg" />
+                </a>
+              </SharedImage>
+              <SocialCounts>
+                <li>
+                  <button>
+                    <img
+                      src="https://static-exp1.licdn.com/sc/h/8ekq8gho1ruaf8i7f86vd1ftt"
+                      alt=""
+                    />
+                    <img
+                      src="https://static-exp1.licdn.com/sc/h/b1dl5jk88euc7e9ri50xy5qo8"
+                      alt=""
+                    />
+                    <span>57</span>
+                  </button>
+                </li>
+                <li>
+                  <a>2 comments</a>
+                </li>
+              </SocialCounts>
+              <SocialAction>
+                <button>
+                  <img src="/images/like.svg" />
+                  <span>Like</span>
+                </button>
+                <button>
+                  <img src="/images/comments.svg" />
+                  <span>Comment</span>
+                </button>
+                <button>
+                  <img src="/images/share.svg" />
+                  <span>Share</span>
+                </button>
+                <button>
+                  <img src="/images/send.svg" />
+                  <span>Send</span>
+                </button>
+              </SocialAction>
+            </Article>
+          </div>
+        );
+      })}
+
+      <PostModal
+        showModal={showModal}
+        handleClick={handleClick}
+        setShowModal={setShowModal}
+      />
     </Container>
   );
 };
