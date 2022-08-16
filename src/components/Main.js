@@ -60,24 +60,24 @@ const Main = () => {
     <Container>
       <ShareBox>
         <div>
-          <img src="/images/user.svg" />
+          <img src="https://omaranbazna.github.io/linked-in-clone/images/user.svg" />
           <button onClick={handleClick}>start a post</button>
         </div>
         <div>
           <button>
-            <img src="/images/photo-icon.svg" />
+            <img src="https://omaranbazna.github.io/linked-in-clone/images/photo-icon.svg" />
             <span>Photo</span>
           </button>
           <button>
-            <img src="/images/video.svg" />
+            <img src="https://omaranbazna.github.io/linked-in-clone/images/video.svg" />
             <span>Video</span>
           </button>
           <button>
-            <img src="/images/job.svg" />
+            <img src="https://omaranbazna.github.io/linked-in-clone/images/job.svg" />
             <span>Jobs</span>
           </button>
           <button>
-            <img src="/images/article.svg" />
+            <img src="https://omaranbazna.github.io/linked-in-clone/images/article.svg" />
             <span>Articles</span>
           </button>
         </div>
