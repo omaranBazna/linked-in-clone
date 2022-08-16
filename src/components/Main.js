@@ -105,9 +105,9 @@ const Main = () => {
                 {post.postContent && <>{post.postContent}</>}
               </Description>
               <SharedImage>
-                <a>{post.postImage && <img src={post.postImage} />}</a>
+                <a>{post.postImage != "" && <img src={post.postImage} />}</a>
               </SharedImage>
-              {post.postVideo && (
+              {post.postVideo != "" && (
                 <ReactPlayer width={"100%"} url={post.postVideo}></ReactPlayer>
               )}
               <SocialCounts>

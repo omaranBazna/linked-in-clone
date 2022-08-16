@@ -50,9 +50,12 @@ const PostModal = ({ showModal, handleClick, setShowModal }) => {
   const submitPost = async () => {
     try {
       // 'file' comes from the Blob or File API
-      const uploadImage = await uploadBytes(storageRef, shareImage);
-      const imageURL = await getDownloadURL(ref(storage, temp_name));
-
+      let uploadImage;
+      let imageURL;
+      if (shareImage) {
+        uploadImage = await uploadBytes(storageRef, shareImage);
+        imageURL = await getDownloadURL(ref(storage, temp_name));
+      }
       const docRef = await addDoc(collection(db, "posts"), {
         user: email,
         displayName: name,
