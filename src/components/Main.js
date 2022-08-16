@@ -17,6 +17,8 @@ import { db } from "../firebase";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setPosts } from "../app/features/postsSlice";
+import ReactPlayer from "react-player";
+
 const Main = () => {
   const [showModal, setShowModal] = useState("close");
   const userName = useSelector((state) => state.user.userName);
@@ -50,6 +52,7 @@ const Main = () => {
       querySnapshot.forEach((doc) => {
         posts = [...posts, { id: doc.id, ...doc.data() }];
       });
+      posts = posts.reverse();
       dispatch(setPosts(posts));
     });
   }, [userName, showModal]);
@@ -104,6 +107,9 @@ const Main = () => {
               <SharedImage>
                 <a>{post.postImage && <img src={post.postImage} />}</a>
               </SharedImage>
+              {post.postVideo && (
+                <ReactPlayer width={"100%"} url={post.postVideo}></ReactPlayer>
+              )}
               <SocialCounts>
                 <li>
                   <button>
@@ -230,7 +236,7 @@ const ShareBox = styled(CommentCard)`
 `;
 const Article = styled(CommentCard)`
   padding: 0;
-  margin: 0 0 8px;
+  margin: 10px 0 8px;
   overflow: visible;
 `;
 const SharedActor = styled.div`
@@ -284,8 +290,9 @@ const Description = styled.div`
   padding: 0 16px;
   overflow: hidden;
   color: rgba(0, 0, 0, 0.9);
-  font-size: 14px;
-  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  text-align: left;
 `;
 const SharedImage = styled.div`
   margin-top: 8px;

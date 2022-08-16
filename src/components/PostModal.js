@@ -5,6 +5,10 @@ import ReactPlayer from "react-player";
 import { useSelector } from "react-redux";
 import { db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+
+import { storage } from "../firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
 const PostModal = ({ showModal, handleClick, setShowModal }) => {
   const photo = useSelector((state) => state.user.userPhoto);
   const name = useSelector((state) => state.user.userName);
@@ -33,14 +37,28 @@ const PostModal = ({ showModal, handleClick, setShowModal }) => {
     setVideoLink("");
     setAssetArea(area);
   };
+
+  const temp_name =
+    email.length +
+    "_" +
+    name +
+    "_" +
+    editorText.length +
+    "_" +
+    Math.floor(Math.random() * 10000);
+  const storageRef = ref(storage, temp_name);
   const submitPost = async () => {
     try {
+      // 'file' comes from the Blob or File API
+      const uploadImage = await uploadBytes(storageRef, shareImage);
+      const imageURL = await getDownloadURL(ref(storage, temp_name));
+
       const docRef = await addDoc(collection(db, "posts"), {
         user: email,
         displayName: name,
         photoURL: photo,
         postContent: editorText,
-        postImage: shareImage ? URL.createObjectURL(shareImage) : "",
+        postImage: imageURL ? imageURL : "",
         postVideo: videoLink,
         time: serverTimestamp(new Date(Date.now())),
       });
