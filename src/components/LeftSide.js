@@ -75,7 +75,7 @@ const UserInfo = styled.div`
   word-break: break-word;
 `;
 const CardBackground = styled.div`
-  background: url("https://omaranbazna.github.io/linked-in-clone/images/card-bg.svg");
+  background: url("/images/card-bg.svg");
   background-position: center;
   background-size: 462px;
   height: 56px;
@@ -83,7 +83,7 @@ const CardBackground = styled.div`
 `;
 const Photo = styled.div`
   box-shadow: none;
-  background-image: url("https://omaranbazna.github.io/linked-in-clone/images/photo.svg");
+  background-image: url("/images/photo.svg");
   width: 72px;
   height: 72px;
   box-sizing: border-box;

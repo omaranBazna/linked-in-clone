@@ -143,15 +143,15 @@ const PostModal = ({ showModal, handleClick, setShowModal }) => {
             <SharedCreation>
               <AttachAssets>
                 <AssetButton onClick={() => switchAssetArea("image")}>
-                  <img src="https://omaranbazna.github.io/linked-in-clone/images/photo-icon.svg" />
+                  <img src="images/photo-icon.svg" />
                 </AssetButton>
                 <AssetButton onClick={() => switchAssetArea("media")}>
-                  <img src="https://omaranbazna.github.io/linked-in-clone/images/video.svg" />
+                  <img src="images/video.svg" />
                 </AssetButton>
               </AttachAssets>
               <ShareComment>
                 <AssetButton>
-                  <img src="https://omaranbazna.github.io/linked-in-clone/images/shared.svg" />
+                  <img src="/images/shared.svg" />
                   Anyone
                 </AssetButton>
               </ShareComment>

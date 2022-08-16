@@ -23,7 +23,7 @@ const Header = () => {
       <Content>
         <Logo>
           <a href="/home">
-            <img src="https://omaranbazna.github.io/linked-in-clone/images/home-logo.svg" />
+            <img src="/images/home-logo.svg" />
           </a>
         </Logo>
 
@@ -33,55 +33,46 @@ const Header = () => {
           </div>
 
           <SearchIcon>
-            <img
-              src="https://omaranbazna.github.io/linked-in-clone/images/search-icon.svg"
-              alt=""
-            />
+            <img src="/images/search-icon.svg" alt="" />
           </SearchIcon>
         </Search>
         <Nav>
           <NavListWrap>
             <NavList>
               <a>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/nav-home.svg" />
+                <img src="/images/nav-home.svg" />
                 <span>home</span>
               </a>
             </NavList>
             <NavList>
               <a>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/nav-network.svg" />
+                <img src="/images/nav-network.svg" />
                 <span>networking</span>
               </a>
             </NavList>
             <NavList>
               <a>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/nav-jobs.svg" />
+                <img src="/images/nav-jobs.svg" />
                 <span>jobs</span>
               </a>
             </NavList>
             <NavList>
               <a>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/nav-messaging.svg" />
+                <img src="/images/nav-messaging.svg" />
                 <span>messaging</span>
               </a>
             </NavList>
             <NavList>
               <a>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/nav-notifications.svg" />
+                <img src="/images/nav-notifications.svg" />
                 <span>notifications</span>
               </a>
             </NavList>
             <User>
               <a>
-                <img
-                  src={
-                    photo
-                      ? photo
-                      : "https://omaranbazna.github.io/linked-in-clone/images/user.svg"
-                  }
-                />
+                <img src={photo ? photo : "images/user.svg"} />
                 <span>Me</span>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/down-icon.svg" />
+                <img src="images/down-icon.svg" />
               </a>
 
               <SignOut onClick={handleSignOut}>
@@ -90,10 +81,10 @@ const Header = () => {
             </User>
             <Work>
               <a>
-                <img src="https://omaranbazna.github.io/linked-in-clone/images/nav-work.svg" />
+                <img src="/images/nav-work.svg" />
                 <span>
                   Work
-                  <img src="https://omaranbazna.github.io/linked-in-clone/images/down-icon.svg" />
+                  <img src="/images/down-icon.svg" />
                 </span>
               </a>
             </Work>

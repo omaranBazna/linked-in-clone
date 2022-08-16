@@ -29,7 +29,7 @@ const Login = () => {
     <Container>
       <Nav>
         <a href="">
-          <img src="https://omaranbazna.github.io/linked-in-clone/images/login-logo.svg" />
+          <img src="/images/login-logo.svg" />
         </a>
         <div>
           <Join>Join Now</Join>
@@ -39,15 +39,12 @@ const Login = () => {
       <Section>
         <Hero>
           <h1>Welcome to your professional community </h1>
-          <img
-            src="https://omaranbazna.github.io/linked-in-clone/images/login-hero.svg"
-            alt=""
-          />
+          <img src="/images/login-hero.svg" alt="" />
         </Hero>
         <Form>
           {!userName && (
             <Google onClick={handleSignin}>
-              <img src="https://omaranbazna.github.io/linked-in-clone/images/google.svg" />
+              <img src="/images/google.svg" />
               Sign In with Google
             </Google>
           )}
